@@ -1,0 +1,23 @@
+application:
+  subdomain: jadeai
+  upstreams:
+    - location: /
+      backend: http://jadeaiapp:3000/
+  public_path:
+    - /
+
+services:
+  jadeaiapp:
+    # twwch/jadeai:0.3.2
+    image: registry.lazycat.cloud/czyt/twwch/jadeai:eecdcd18cd878854
+    environment:
+      - APP_NAME=JadeAI
+      - AUTH_ENABLED={{.U.auth_enabled}}
+      - AUTH_SECRET={{ stable_secret "auth#sec" }}
+      - GOOGLE_CLIENT_ID={{.U.google_client_id}}
+      - GOOGLE_CLIENT_SECRET={{.U.google_client_secret}}
+      - DB_TYPE=sqlite
+      - SQLITE_PATH=/app/data/jade.db
+      - DEFAULT_LOCALE={{.U.default_locale}}
+    binds:
+      - /lzcapp/var/data:/app/data

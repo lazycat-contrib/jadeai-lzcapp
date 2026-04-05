@@ -1,0 +1,28 @@
+package: community.lazycat.app.jadeai
+version: 0.3.2
+name: JadeAI
+description: "JadeAI - An intelligent web application with authentication and multi-language support"
+min_os_version: "1.5.0"
+author: "JadeAI Team"
+license: MIT
+homepage: https://github.com/twwch/jadeai
+
+locales:
+  zh:
+    name: "JadeAI"
+    description: "AI 驱动的智能简历生成器"
+  en:
+    name: "JadeAI"
+    description: "AI-driven intelligent resume generator"
+
+unsupported_platforms:
+  - ios
+  - android
+  - tvos
+
+permissions:
+  required:
+    - net.internet
+  optional:
+    - document.read
+    - document.write

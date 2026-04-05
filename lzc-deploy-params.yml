@@ -1,0 +1,58 @@
+params:
+  - id: auth_enabled
+    type: bool
+    name: "Enable Authentication"
+    description: "Enable user authentication for the application"
+    optional: true
+    default_value: "false"
+
+  - id: google_client_id
+    type: string
+    name: "Google Client ID"
+    description: "Google OAuth Client ID (leave empty to disable Google login)"
+    optional: true
+
+  - id: google_client_secret
+    type: secret
+    name: "Google Client Secret"
+    description: "Google OAuth Client Secret (required if Client ID is set)"
+    optional: true
+
+  - id: default_locale
+    type: string
+    name: "Default Language"
+    description: "Default language locale (e.g., zh, en, ja)"
+    optional: false
+    default_value: "zh"
+
+locales:
+  zh:
+    auth_enabled:
+      name: "启用认证"
+      description: "为应用启用用户认证功能"
+    google_client_id:
+      name: "Google 客户端 ID"
+      description: "Google OAuth 客户端 ID（留空则禁用 Google 登录）"
+    google_client_secret:
+      name: "Google 客户端密钥"
+      description: "Google OAuth 客户端密钥（如果设置了客户端 ID 则必填）"
+    default_locale:
+      name: "默认语言"
+      description: "默认语言区域（如：zh, en, ja）"
+
+  en:
+    auth_enabled:
+      name: "Enable Authentication"
+      description: "Enable user authentication for the application"
+
+    google_client_id:
+      name: "Google Client ID"
+      description: "Google OAuth Client ID (leave empty to disable Google login)"
+
+    google_client_secret:
+      name: "Google Client Secret"
+      description: "Google OAuth Client Secret (required if Client ID is set)"
+
+    default_locale:
+      name: "Default Language"
+      description: "Default language locale (e.g., zh, en, ja)"
