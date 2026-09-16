@@ -5,11 +5,10 @@ application:
       backend: http://jadeaiapp:3000/
   public_path:
     - /
-
 services:
   jadeaiapp:
     # upstream: twwch/jadeai:0.7.0
-    image: twwch/jadeai:0.7.0
+    image: registry.lazycat.cloud/czyt/twwch/jadeai:b5c3df017ea020c7
     environment:
       - APP_NAME=JadeAI
       - AUTH_ENABLED={{.U.auth_enabled}}
