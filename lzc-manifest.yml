@@ -8,8 +8,8 @@ application:
 
 services:
   jadeaiapp:
-    # twwch/jadeai:0.3.2
-    image: registry.lazycat.cloud/czyt/twwch/jadeai:eecdcd18cd878854
+    # upstream: twwch/jadeai:0.7.0
+    image: twwch/jadeai:0.7.0
     environment:
       - APP_NAME=JadeAI
       - AUTH_ENABLED={{.U.auth_enabled}}
